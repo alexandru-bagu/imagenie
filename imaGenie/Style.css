@@ -1,0 +1,283 @@
+﻿* 
+{
+    font-size: 16px;
+}
+
+body 
+{
+    background: rgba(0, 255, 144, 0.47);
+    margin: 0px;
+    padding: 0px;
+}
+
+.header
+{
+    z-index: 9999;
+    position: fixed;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+    color: white;
+}
+
+.header a
+{
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(18, 134, 102, 0.60);
+}
+
+.header a:hover
+{
+    color: #DDDDDD;
+    text-decoration: none;
+    text-shadow: 0px 0px 15px rgba(5, 133, 98, 1);
+}
+
+.header td
+{
+    width: auto;
+}
+
+.header input[type=submit] 
+{
+    color: white;
+}
+
+.header input[type=text] 
+{
+    font-size: 12px;
+    width:100px;
+    height:20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.header input[type=password] 
+{
+    font-size: 12px;
+    width:100px;
+    height:20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+.navigation
+{
+    vertical-align:top;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+
+.navigation a
+{
+    font-size: 18px;
+    padding: 2px;
+}
+
+.login
+{
+    vertical-align:top;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    float: right;
+    display: inline-block;
+}
+
+.loginButton
+{
+    margin: 5px 5px 5px 5px;
+}
+
+.modalPopupBG
+{
+    background-color: #666699;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.modalPopup
+{
+    background-color: rgba(51, 137, 137, 0.61);
+    min-width: 300px;
+}
+
+.popupHeader
+{
+    font-size: 26px;
+    background-color: #ff6a00;
+    line-height: 100%;
+    text-align: center;
+}
+
+.padding
+{
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.padless 
+{
+    margin: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 5px;
+}
+
+.padless50
+{
+    margin: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 5px;
+}
+
+#headerTable td {
+   padding:0; margin:0;
+}
+
+#headerTable {
+   border-collapse: collapse;
+}
+
+input
+{
+    outline: #808080 thin;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: rgba(0, 255, 144, 0.25) !important;
+    font-size: 16px;
+}
+
+input:hover
+{
+    background-color: rgba(0, 255, 144, 0.7) !important;
+}
+
+.register
+{
+    display: inline-block;
+}
+
+input:-webkit-autofill 
+{
+    border: 1px;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 255, 144, 0.7) inset;
+}
+
+.title
+{
+    padding: 60px 0px 0px 0px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, .91);
+    text-decoration: underline;
+}
+
+.category
+{
+    float: left;
+    margin: 5px; 
+    min-width: 100px; 
+    min-height: 100px; 
+    border-style:dashed; 
+    border-width:thin;
+}
+
+.category input[type=text] 
+{
+    margin: 0px; 
+    padding: 0px;
+    font-size: 24px;
+}
+.category input[type=submit] 
+{
+    padding: 0px;
+    margin: 0px; 
+    font-size: 24px;
+}
+
+
+.highlight
+{
+    margin: 0px; 
+    padding: 0px;
+    width: auto;
+    background: rgba(128, 128, 128, 0.4);
+}
+
+.categorytitle
+{
+    display: inline-block;
+    margin: 5px; 
+    padding: 0px;
+    font-size: 32px;
+    color: black;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, .91);
+    line-height: 40px; 
+}
+
+.body
+{
+    width: 100%;
+    max-width: 100%;
+    display:  inline-block;
+    color: black !important;
+}
+
+.blackText
+{
+    color: black !important;
+}
+
+.image
+{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    width: auto !important;
+    border-style: dashed;
+    border-width: thin;
+    float: left;
+    vertical-align: top;
+}
+
+.footer
+{
+    margin: 0px;
+    padding: 0px;
+    position:fixed;
+    bottom:0px;
+    max-width:100%;
+    width:100%;
+    background: rgba(0, 0, 0, 0.7);
+    line-height:20px;
+    color: gray;
+    text-align:center;
+}
+
+.comment
+{
+    padding: 5px 1px 1px 1px;
+    position:relative;
+    margin:1% 1% 1% 1%;
+    width:98%;
+    display:block;
+    border-style:groove;
+    border-width:thin;
+}
+
+.paddedtext
+{
+    padding-left:10px;
+}

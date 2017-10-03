@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="imaGenie.Default" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+<link href="Style.css" rel="stylesheet" type="text/css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>imaGENIE</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+    <div class="header">
+        <div class="navigation">
+            <asp:HyperLink ID="homeLink" runat="server" NavigateUrl="~/Index.aspx">Home</asp:HyperLink>
+            <asp:HyperLink ID="uploadLink" runat="server" NavigateUrl="~/Upload.aspx">Upload</asp:HyperLink>
+            <asp:HyperLink ID="categoryLink" runat="server" NavigateUrl="~/Categories.aspx">Categories</asp:HyperLink>
+            <asp:HyperLink ID="profile" runat="server">Profile</asp:HyperLink>
+            <asp:TextBox ID="searchText" runat="server" Text="" /><asp:Button ID="searchBtn" runat="server" OnClick="searchBtn_Click" Text="Search"/>
+        </div>
+        <div class="login" align="right">
+            <asp:LoginView ID="loginStatus" runat="server">
+                <AnonymousTemplate>
+                    <table id="headerTable" class="padless">
+                        <tr>
+                            <td align="right" class="padless50">
+                                <asp:Login ID="login" CssClass="padless" runat="server" Orientation="Horizontal" RememberMeText="Remember me" TitleText="" UserNameLabelText="Username:" UserNameRequiredErrorMessage="Username is required." DestinationPageUrl="~/Index.aspx" OnLoginError="login_LoginError" FailureText="" Height="23px">
+                                    <FailureTextStyle Wrap="False" />
+                                    <LoginButtonStyle CssClass="loginButton" ForeColor="White" />
+                                </asp:Login>
+                            </td>
+                            <td align="right" style="width: 50px; padding-right: 10px;">
+                                <asp:Button ID="registerBtn" runat="server" Text="Register" OnClick="registerBtn_Click"/>
+                            </td>
+                        </tr>
+                    </table>
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    Welcome, <asp:LoginName ID="loginName" runat="server" />. <asp:LoginStatus CssClass="padding" ID="loginStatus" runat="server" />
+                </LoggedInTemplate>
+            </asp:LoginView>
+        </div>
+    </div>
+    <div class="body" style="margin-bottom:22px;">
+        <div class="title">imaGENIE</div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer">
+        Copyright (c) Alexandru Bagu - <%= DateTime.Now.Year %>
+    </div>
+
+    <asp:Timer ID="Timer1" runat="server" Interval="10000" OnTick="Timer1_Tick" Enabled="false"/>
+    <asp:scriptmanager id="scriptManager" runat="server"/>
+    <asp:Panel id="popupAnchor" runat="server" />
+    <ajaxToolkit:modalpopupextender id="modalPopupExtender" runat="server" 
+	    okcontrolid="btnOkay" 
+	    targetcontrolid="popupAnchor" popupcontrolid="modalPopup" 
+	    popupdraghandlecontrolid="popupHeader" drag="true" 
+	    backgroundcssclass="modalPopupBG" DropShadow="True">
+    </ajaxToolkit:modalpopupextender>
+    <asp:panel id="modalPopup" CssClass="modalPopup" style="display: none" runat="server">
+	    <div>
+            <asp:Panel cssclass="popupHeader" id="popupHeader" runat="server">text</asp:Panel>
+            <div class="popupBody" id="popupBody">
+                <asp:Label ID="popupBodyText" runat="server" Text=""></asp:Label>
+            </div>
+            <div class="popupControls" align="center">
+                <asp:Button ID="btnOkay" runat="server" Text="Done"/>
+		    </div>
+        </div>
+    </asp:panel>
+    </form>
+</body>
+</html>
